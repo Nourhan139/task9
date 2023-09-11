@@ -1,0 +1,161 @@
+<!--<html>
+    <button id="changeButton">Change Word</button>
+    <p id="word">Nourhan</p>
+    <button id="changeColorButton">Change Color</button>
+    <div id="colorDiv">This is a colored div</div>
+    <button onclick="changeFontSize()">Change Font Size</button>
+    <p id="text">Sample Text</p>
+    <button id="borderButton">Change Border Style</button>
+    <p id="paragraph">This is a paragraph.</p>
+    <button id="hideButton">Hide Paragraph</button>
+    <p id="paragraph1">This is paragraph 1.</p>
+    <p id="paragraph2">This is paragraph 2.</p>
+    <button id="showButton">Show Previous Paragraph</button>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <p id="paragraph1">This is paragraph 1.</p>
+  <p id="paragraph2">This is paragraph 2.</p>
+  <button id="hideButton">Hide Paragraph</button>
+  <button id="showButton">Show Previous Paragraph</button>
+
+  <script>
+    // Get the hide button element
+    const hideButton = document.getElementById('hideButton');
+
+    // Add event listener to the hide button
+    hideButton.addEventListener('click', function() {
+      // Get the paragraph element
+      const paragraph = document.getElementById('paragraph1');
+
+      // Hide the paragraph by changing the display property
+      paragraph.style.display = 'none';
+    });
+
+    // Get the show button element
+    const showButton = document.getElementById('showButton');
+
+    // Add event listener to the show button
+    showButton.addEventListener('click', function() {
+      // Get the paragraph elements
+      const paragraph1 = document.getElementById('paragraph1');
+      const paragraph2 = document.getElementById('paragraph2');
+
+      // Check if paragraph1 is hidden
+      if (paragraph1.classList.contains('hidden')) {
+        // Show paragraph1
+        paragraph1.classList.remove('hidden');
+      } else {
+        // Show paragraph2
+        paragraph2.classList.remove('hidden');
+      }
+    });
+  </script>
+  <button id="outputButton">Click Me</button>
+  <div id="output"></div>
+
+  <script>
+    // Get the output button element
+    const outputButton = document.getElementById('outputButton');
+
+    // Add event listener to the output button
+    outputButton.addEventListener('click', function() {
+      // Get the output element
+      const output = document.getElementById('output');
+
+      // Set the innerHTML of the output element
+      output.innerHTML = 'Hello sir';
+    });
+  </script>
+   <button id="outputButton">Click Me</button>
+
+   <script>
+   // Get the output button element
+   const outputButton = document.getElementById('outputButton');
+   // Add event listener to the output button
+   outputButton.addEventListener('click', function() {
+    // Write the output using document.write()
+    document.write('Button clicked!');
+     });
+   </script>
+   <button id="outputButton">Click Me</button>
+
+   <script>
+   // Get the output button element
+   const outputButton = document.getElementById('outputButton');
+   // Add event listener to the output button
+   outputButton.addEventListener('click', function() {
+    // Display an alert with the output
+    alert('Button clicked!');
+     });
+   </script>
+   <button id="outputButton">Click Me</button>
+   <script>
+   // Get the output button element
+   const outputButton = document.getElementById('outputButton');
+   // Add event listener to the output button
+   outputButton.addEventListener('click', function() {
+    // Log the output to the console
+    console.log('Button clicked!');
+     });
+   </script>
+   <button id="outputButton1">Arithmetic 1</button>
+   <button id="outputButton2">Arithmetic 2</button>
+   <button id="outputButton3">Call Function</button>
+   <p id="output"></p>
+ 
+   <script>
+     // Arithmetic 1: (2 * 10) / 100
+     document.getElementById('outputButton1').addEventListener('click', function() {
+       const result = (2 * 10) / 100;
+       alert('Result: ' + result);
+     });
+ 
+     // Arithmetic 2: 10/2 * 5 /12 + 20
+     document.getElementById('outputButton2').addEventListener('click', function() {
+       const num1 = 10/2;
+       const num2 = num1 * 5 / 12 + 20;
+       document.getElementById('output').innerHTML = 'Result: ' + num2;
+     });
+ 
+     // Function for Arithmetic 3: 5*45 /58 + 100 -10
+     function performArithmetic() {
+       const result = 5*45 / 58 + 100 - 10;
+       console.log('Result: ' + result);
+     }
+ 
+     // Call the function for Arithmetic 3
+     document.getElementById('outputButton3').addEventListener('click', performArithmetic);
+ 
+     // Object to store mobile info
+     const mobile = {
+       name: 'iPhone',
+       model: '12 Pro',
+       type: 'Smartphone',
+       year: 2021
+     };
+ 
+     // Output name and model in innerHTML
+     document.getElementById('output').innerHTML = 'Name: ' + mobile.name + ', Model: ' + mobile.model;
+ 
+     // String slice example
+     const str = 'Hello, World!';
+     const slicedStr = str.slice(7, 12);
+     console.log('Sliced String: ' + slicedStr);
+ 
+     // String substr example
+     const substr = str.substr(7, 5);
+     console.log('Substring: ' + substr);
+   </script>
+</body>
+</html>
